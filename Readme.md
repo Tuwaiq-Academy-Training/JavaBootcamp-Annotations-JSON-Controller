@@ -266,5 +266,26 @@ https://www.javatpoint.com/spring-boot-tutorial
 
 ## Controller Layer 
 
-وحدة التحكم (Controller Layer) (طبقة العرض ، أو المنفذ) هي واجهة بروتوكول تعرض وظائف التطبيق كخدمات ويب RESTful. يجب أن لا شيء أكثر من ذلك.
+وحدة التحكم هي واجهة السيرفر التي من خلالها يمكن استقبال الطلبات عبر البوابات وارسال النتيجة ولكي يمكن فتح البوابات لابد أن تحتوي كل بوابة على ثلاث أشياء 
+/
+method : تحديد  نوع الطلب  Get , Post , Put , Delete 
+api : URL
+end point : الدالة المسؤولة عن استقبال الطلب وارسال النتيجة 
 
+
+@RestController
+@RequestMapping("/api/v1/message")
+public class MessageController {
+
+
+
+    @GetMapping("/message")
+    public String getMessage(){
+        return "Hi from Spring Boot";
+    }
+    
+    
+    --------------
+    
+
+  
