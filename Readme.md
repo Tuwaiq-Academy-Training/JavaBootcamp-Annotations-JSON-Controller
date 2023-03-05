@@ -266,19 +266,16 @@ https://www.javatpoint.com/spring-boot-tutorial
 
 ## Controller Layer 
 
-وحدة التحكم هي واجهة السيرفر التي من خلالها يمكن استقبال الطلبات عبر البوابات وارسال النتيجة ولكي يقوم بمهمته لابد أن تحتوي كل بوابة على ثلاث أشياء /
-### method : تحديد  نوع الطلب  Get , Post , Put , Delete  
-### URL : الذي من خلاله يمكن طلب البوابة
-### end point : الدالة المسؤولة عن استقبال الطلب وارسال النتيجة 
+وحدة التحكم هي واجهة السيرفر التي من خلالها يمكن استقبال الطلبات عبر البوابات وارسال النتيجة ولكي يقوم بمهمته لابد أن تحتوي كل بوابة على ثلاثة أشياء /
+#### 1.method : تحديد  نوع الطلب  Get , Post , Put , Delete  
+#### 2.URL : الذي من خلاله يمكن طلب البوابة
+#### 3.end point : الدالة المسؤولة عن استقبال الطلب وارسال النتيجة 
 
 
 
 @RestController
 @RequestMapping("/api/v1/todo")
 public class TodoController {
-
-
-
     @GetMapping("/get")
     public String getTodo(){
         return "Go Work!";
@@ -288,7 +285,7 @@ public class TodoController {
     
     
     
-  #### @RestController : تجعل الكلاس قادر على استقبال الطلبات وارجاعها ك  JSON
+  #### @RestController : تعليق توضيحي توضح أن هذا الكلاس كونترول ويقوم بإرجاع JSON 
   #### @RequestMapping : لوضع API  محدد لهذا الكنترولر
   #### @GetMapping :Get تحديد نوع الماثود 
   ####  ("/message") : لتحديد URL
